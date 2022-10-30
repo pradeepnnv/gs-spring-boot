@@ -10,7 +10,7 @@ public class HelloController {
     public String index() {
         String env = System.getenv("ENVIRONMENT");
         if(env==null || env.isBlank()) {
-        env = "Dev";
+        env = "UNITTEST";
         }
         String msg = "Greetings from Spring Boot!"
 				+env
