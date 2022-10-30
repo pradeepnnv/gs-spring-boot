@@ -8,8 +8,12 @@ public class HelloController {
 
     @GetMapping("/")
     public String index() {
+        String env = System.getenv("ENVIRONMENT");
+        if(env==null || env.isBlank()) {
+        env = "Dev";
+        }
         String msg = "Greetings from Spring Boot!"
-//				+System.getenv("ENVIRONMENT")
+				+env
                 ;
         return msg;
     }
