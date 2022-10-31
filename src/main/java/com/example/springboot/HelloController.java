@@ -12,7 +12,7 @@ public class HelloController {
         if(env==null || env.isBlank()) {
         env = "UNITTEST";
         }
-        String msg = "Greetings from Spring Boot!"
+        String msg = "Responding from "
 				+env
                 ;
         return msg;
